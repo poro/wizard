@@ -13,8 +13,8 @@ export default function Header() {
       <Image
         width={50}
         height={50}
-        src={"/orcish-ai-nextjs-framework.png"}
-        alt="Orcish AI NextJS Framework"
+        src={"/AI-Cont0329.png"}
+        alt="AI Continuum Next.js Framework Logo"
         priority
       />
 

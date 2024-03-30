@@ -38,7 +38,7 @@ export default function OpenAICompletion() {
       const tts = await voice.mutateAsync({
         prompt: completion,
         model: VoiceModel.TTS_1,
-        voice: Voice.ECHO,
+        voice: Voice.SHIMMER,
       });
       setLoading(false);
       setAiResult(completion);
@@ -58,15 +58,13 @@ export default function OpenAICompletion() {
         onChange={(e) => setPrompt(e.target.value)}
         onKeyDown={(e) => enter(e, handleChatGpt)}
       ></Textarea>
-      <Button variant={"outline"} onClick={handleChatGpt}>
-        Ask
-      </Button>
+     
       {loading && <Loading />}
       {aiResult && (
         <div
           className="mt-5 p-20 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] dark:text-white"
-          dangerouslySetInnerHTML={{ __html: aiResult }}
-        />
+          dangerouslySetInnerHTML={{ __html: aiResult }}>
+        </div>
       )}
       {aiVoice && (
         <audio controls>
