@@ -13,7 +13,7 @@ export default function Header() {
       <Image
         width={50}
         height={50}
-        src={"/AI-Cont0329.png"}
+        src={"/logo.png"}
         alt="AI Continuum Next.js Framework Logo"
         priority
       />
