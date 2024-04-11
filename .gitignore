@@ -37,4 +37,4 @@ yarn-error.log*
 next-env.d.ts
 
 # text to speech files
-/public/tts/*.*
+/public/tts/*.mp3
