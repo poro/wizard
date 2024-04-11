@@ -28,11 +28,11 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            
+            <NextAuthProvider>
               <Header />
               {children}
               <Footer />
-          
+            </NextAuthProvider>
           </ThemeProvider>
         </Provider>
       </body>
