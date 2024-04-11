@@ -1,5 +1,20 @@
-import { authOptions } from "@/lib/authOptions";
-import NextAuth from "next-auth/next";
+import NextAuth from "next-auth";
+import DiscordProvider from "next-auth/providers/discord";
+import GoogleProvider from "next-auth/providers/google";
+
+const authOptions = {
+    providers: [
+        DiscordProvider({
+            clientId: process.env.CLIENT_ID as string,
+            clientSecret: process.env.CLIENT_SECRET as string,
+        }),
+        GoogleProvider({
+            clientId: process.env.GOOGLE_CLIENT_ID as string,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+        }),
+    ],
+    secret: process.env.SECRET,
+}
 
 const handler = NextAuth(authOptions);
 
