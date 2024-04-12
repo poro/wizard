@@ -71,7 +71,7 @@ export const gptRouter = router({
 
       const soundBuffer = await sound.arrayBuffer();
       const buffer = Buffer.from(soundBuffer);
-      await fs.promises.writeFile(`./public/${_output}`, buffer);
+      await fs.promises.writeFile(`./public${_output}`, buffer);
 
       return outputPath;
     }),
