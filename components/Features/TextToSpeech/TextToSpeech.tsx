@@ -34,6 +34,7 @@ export default function OpenAIImage() {
   const [selectedVoice, setSelectedVoice] = useState<Voice>(Voice.SHIMMER);
   const voice = trpc.gpt.voice.useMutation();
 
+  /* this is interesting */
   const handleChatGpt = async () => {
     try {
       setAiResult("");
